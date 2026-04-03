@@ -8,7 +8,7 @@ CORS(app)
 # Load model
 model = pickle.load(open("model.pkl", "rb"))
 
-@app.route('/predict', methods=['POST'])
+@app.route('https://mark-prediction.onrender.com/predict', methods=['POST'])
 def predict():
     data = request.get_json()
     hours = float(data['hours'])
